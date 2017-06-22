@@ -1,4 +1,24 @@
 module ManageIQ::Providers::Kubernetes::ContainerManager::InventoryCollections
+  def targeted
+    false
+  end
+
+  def strategy
+    nil
+  end
+
+  def saver_strategy
+    :default
+  end
+
+  def shared_options
+    {
+      :strategy       => strategy,
+      :targeted       => targeted,
+      :saver_strategy => saver_strategy
+    }
+  end
+
   def initialize_inventory_collections(ems = @manager)
     # TODO: Targeted refreshes will require adjusting the associations / arels. (duh)
     @collections = {}
@@ -66,21 +86,21 @@ module ManageIQ::Providers::Kubernetes::ContainerManager::InventoryCollections
       )
 
     @collections[:container_image_registries] =
-      ::ManagerRefresh::InventoryCollection.new(
+      ::ManagerRefresh::InventoryCollection.new(shared_options.merge(
         :model_class    => ContainerImageRegistry,
         :parent         => ems,
         :builder_params => {:ems_id => ems.id},
         :association    => :container_image_registries,
         :manager_ref    => [:host, :port],
-      )
+      ))
     @collections[:container_images] =
-      ::ManagerRefresh::InventoryCollection.new(
+      ::ManagerRefresh::InventoryCollection.new(shared_options.merge(
         :model_class    => ContainerImage,
         :parent         => ems,
         :builder_params => {:ems_id => ems.id},
         :association    => :container_images,
-        :manager_ref    => [:image_ref, :container_image_registry],
-      )
+        :manager_ref    => [:image_ref],
+      ))
 
     @collections[:container_groups] =
       ::ManagerRefresh::InventoryCollection.new(
