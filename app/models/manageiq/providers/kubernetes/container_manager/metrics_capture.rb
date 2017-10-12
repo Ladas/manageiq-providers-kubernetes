@@ -17,13 +17,13 @@ module ManageIQ::Providers
     require_nested :HawkularCaptureContext
     require_nested :PrometheusCaptureContext
 
-    INTERVAL = 20.seconds
+    INTERVAL = {"realtime" => 30.seconds, "hourly" => 3600.seconds}
 
     VIM_STYLE_COUNTERS = {
       "cpu_usage_rate_average"     => {
         :counter_key           => "cpu_usage_rate_average",
         :instance              => "",
-        :capture_interval      => INTERVAL.to_s,
+        :capture_interval      => INTERVAL["realtime"].to_s,
         :precision             => 1,
         :rollup                => "average",
         :unit_key              => "percent",
@@ -32,7 +32,7 @@ module ManageIQ::Providers
       "mem_usage_absolute_average" => {
         :counter_key           => "mem_usage_absolute_average",
         :instance              => "",
-        :capture_interval      => INTERVAL.to_s,
+        :capture_interval      => INTERVAL["realtime"].to_s,
         :precision             => 1,
         :rollup                => "average",
         :unit_key              => "percent",
@@ -41,7 +41,7 @@ module ManageIQ::Providers
       "net_usage_rate_average" => {
         :counter_key           => "net_usage_rate_average",
         :instance              => "",
-        :capture_interval      => INTERVAL.to_s,
+        :capture_interval      => INTERVAL["realtime"].to_s,
         :precision             => 1,
         :rollup                => "average",
         :unit_key              => "kilobytespersecond",
@@ -59,16 +59,16 @@ module ManageIQ::Providers
 
       begin
         context = if ems && ems.connection_configurations.prometheus.try(:endpoint)
-                    PrometheusCaptureContext.new(target, start_time, end_time, INTERVAL)
+                    PrometheusCaptureContext.new(target, start_time, end_time, INTERVAL[interval_name])
                   else
-                    HawkularCaptureContext.new(target, start_time, end_time, INTERVAL)
+                    HawkularCaptureContext.new(target, start_time, end_time, INTERVAL[interval_name])
                   end
       rescue TargetValidationError, TargetValidationWarning => e
         _log.send(e.log_severity, "[#{target_name}] #{e.message}")
         ems.try(:update_attributes,
                 :last_metrics_error       => :invalid,
                 :last_metrics_update_date => Time.now.utc)
-        raise
+        return [{}, {}]
       end
 
       Benchmark.realtime_block(:collect_data) do
@@ -78,7 +78,7 @@ module ManageIQ::Providers
           _log.error("Hawkular metrics service unavailable: #{e.message}")
           ems.update_attributes(:last_metrics_error       => :unavailable,
                                 :last_metrics_update_date => Time.now.utc) if ems
-          raise
+          return [{}, {}]
         end
       end
 

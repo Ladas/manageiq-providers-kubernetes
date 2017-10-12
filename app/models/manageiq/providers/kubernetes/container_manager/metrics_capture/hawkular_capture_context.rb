@@ -75,7 +75,13 @@ class ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture
     def sort_and_normalize(data)
       # Sorting and removing last entry because always incomplete
       # as it's still in progress.
-      norm_data = (data.sort_by { |x| x['start'] }).slice(0..-2)
+      # TODO(lsmola) removing last entry only if not hourly? since I will be getting 1 sample back for 1 hour
+      # norm_data = (data.sort_by { |x| x['start'] }).slice(0..-2)
+      norm_data = if @interval == 3600
+                    data
+                  else
+                    (data.sort_by { |x| x['start'] }).slice(0..-2)
+                  end
       norm_data.reject { |x| x.values.include?('NaN') || x['empty'] == true }
     end
   end

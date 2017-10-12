@@ -30,7 +30,7 @@ module ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::Hawkul
 
   def hawkular_options
     {
-      :tenant         => @tenant,
+      :tenant         => "vcr-tests",
       :http_proxy_uri => VMDB::Util.http_proxy_uri.to_s,
       :verify_ssl     => @ext_management_system.verify_ssl_mode(hawkular_endpoint),
       :ssl_cert_store => @ext_management_system.ssl_cert_store(hawkular_endpoint),

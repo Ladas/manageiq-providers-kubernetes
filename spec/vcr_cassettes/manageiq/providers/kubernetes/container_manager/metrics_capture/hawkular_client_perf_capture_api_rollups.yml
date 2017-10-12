@@ -1,0 +1,379 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://hawkular-metrics.10.35.49.18.nip.io/hawkular/metrics/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.2p198
+      Hawkular-Tenant:
+      - vcr-tests
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJtYW5hZ2VtZW50LWluZnJhIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Im1hbmFnZW1lbnQtYWRtaW4tdG9rZW4tNmo4NTUiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoibWFuYWdlbWVudC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjdkYzIwZGM2LWE2YzAtMTFlNy04ZGU2LTAwMWE0YTE2MjcxMSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDptYW5hZ2VtZW50LWluZnJhOm1hbmFnZW1lbnQtYWRtaW4ifQ.Cuf_1soEiFIFEwXkZy3B-xBlgk63nc4QckylCQBsbjNXVy3RULKzpqpXYDpOjtacbo0KDX2p50n9cOtj5zwyR31EAAmAU8IoJXHpytOrdsJrmRe6ZZSUBq12Fq44dV5zdhey5k5jQ_VFlicKUqPW8jiQb_tBUQPX1co5DWsQJ8hDuWik84QBMG8DkY2fpc8IG6vIM02tNIMa0dgAXAyntkRRedezhnBYBSI5RqDkqKT7Kmae9rcjeXiwhhKFLDAVDDiCUdPpbNG4I7Brz1LhYKLyKP2SVT1rrvzx9CCxs2a2jfeY_fAzgyT_UbwRTSPvpBpa2TcEbowuW21vLtKvVg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      X-Powered-By:
+      - Undertow/1
+      Server:
+      - JBoss-EAP/7
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '158'
+      Date:
+      - Mon, 09 Oct 2017 07:34:24 GMT
+      Set-Cookie:
+      - a054b5d9e987bf679f10c9d29be39478=dde9a2341ac2344965c2d899abc7b53b; path=/;
+        HttpOnly; Secure
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAA2MvQ7CIBgA34VZmgJFUrf6U3Vwkcb9o3yNJJQ2QF2M7y7TLXf3JQ/M0Y1JY/y4EcmB6KF7Dpcz2ZH7vHqcMWTIbgn0hTEVFqWuuKpk1bsAnka0b8iUleC4OZ9pH5eZXl2m+taxYk+cgUIp0IAUHFtbQ8MnztUeBbONGI20YFoogxOkBMFGKNm2kt8fuNfapZ8AAAA=
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 07:34:25 GMT
+- request:
+    method: get
+    uri: https://hawkular-metrics.10.35.49.18.nip.io/hawkular/metrics/counters/kibana%2F3cf5f222-a6c4-11e7-8de6-001a4a162711%2Fcpu%2Fusage/stats/?bucketDuration=3600s&end=1507482000000&start=1507222800000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.2p198
+      Hawkular-Tenant:
+      - vcr-tests
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJtYW5hZ2VtZW50LWluZnJhIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Im1hbmFnZW1lbnQtYWRtaW4tdG9rZW4tNmo4NTUiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoibWFuYWdlbWVudC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjdkYzIwZGM2LWE2YzAtMTFlNy04ZGU2LTAwMWE0YTE2MjcxMSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDptYW5hZ2VtZW50LWluZnJhOm1hbmFnZW1lbnQtYWRtaW4ifQ.Cuf_1soEiFIFEwXkZy3B-xBlgk63nc4QckylCQBsbjNXVy3RULKzpqpXYDpOjtacbo0KDX2p50n9cOtj5zwyR31EAAmAU8IoJXHpytOrdsJrmRe6ZZSUBq12Fq44dV5zdhey5k5jQ_VFlicKUqPW8jiQb_tBUQPX1co5DWsQJ8hDuWik84QBMG8DkY2fpc8IG6vIM02tNIMa0dgAXAyntkRRedezhnBYBSI5RqDkqKT7Kmae9rcjeXiwhhKFLDAVDDiCUdPpbNG4I7Brz1LhYKLyKP2SVT1rrvzx9CCxs2a2jfeY_fAzgyT_UbwRTSPvpBpa2TcEbowuW21vLtKvVg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      X-Powered-By:
+      - Undertow/1
+      Server:
+      - JBoss-EAP/7
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '454'
+      Date:
+      - Mon, 09 Oct 2017 07:34:25 GMT
+      Set-Cookie:
+      - a054b5d9e987bf679f10c9d29be39478=dde9a2341ac2344965c2d899abc7b53b; path=/;
+        HttpOnly; Secure
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI3UvUokURRF4Xfp2ODWf11fRSYQNFRE22AYfHcRps9eaGOtCi/rC+oE++7f6e18/3o+3Q5L28Zx3NvXd3N6fH64vK3z5e3p5fz3dHt+fX/8uPkGExWcWjuGiAKnVcBEgdsoYKKCc9uPIaLAWRwHUeAujoOo4DKI4yAKXMRxEAXu4jiICq6jOA6iwFUcB1FgF8dBVHCbxHEQBa7iOIgK7k0cB1HgLI6DKHATx0FUsA/iOIgCZ3EcRIG7OA6iC5zaeHwcRoHL8XEYBfbj4zAqOIzHx2EUKAaZUcH/v/07RBQoBplRoBhkRgUnMciMAsUgMwoUg8yo4CwGmVGgGGRGgWKQGRVcxCAzChSDzChQDDKjgqsYZEaBYpAZFdzEIDMKFIPMKFAMMqOCuxhkRoFikBkFikFmVLCbQe5XBrmbQe5XBrmbQe4/B3luYpAZBYpBZlRwaMfHYRQoBplRoBhkRgVHMciMAsUgMwoUg8yo4CQGmVGgGGRGgWKQGRWcxSAzChSDzChQDDKjgosYZEaBYpAZFVzFIDMKFIPMKFAMMqOCmxhkRoFikBkFikFmVHC/Osh/PgH7btftCRAAAA==
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 07:34:25 GMT
+- request:
+    method: get
+    uri: https://hawkular-metrics.10.35.49.18.nip.io/hawkular/metrics/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.2p198
+      Hawkular-Tenant:
+      - vcr-tests
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJtYW5hZ2VtZW50LWluZnJhIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Im1hbmFnZW1lbnQtYWRtaW4tdG9rZW4tNmo4NTUiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoibWFuYWdlbWVudC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjdkYzIwZGM2LWE2YzAtMTFlNy04ZGU2LTAwMWE0YTE2MjcxMSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDptYW5hZ2VtZW50LWluZnJhOm1hbmFnZW1lbnQtYWRtaW4ifQ.Cuf_1soEiFIFEwXkZy3B-xBlgk63nc4QckylCQBsbjNXVy3RULKzpqpXYDpOjtacbo0KDX2p50n9cOtj5zwyR31EAAmAU8IoJXHpytOrdsJrmRe6ZZSUBq12Fq44dV5zdhey5k5jQ_VFlicKUqPW8jiQb_tBUQPX1co5DWsQJ8hDuWik84QBMG8DkY2fpc8IG6vIM02tNIMa0dgAXAyntkRRedezhnBYBSI5RqDkqKT7Kmae9rcjeXiwhhKFLDAVDDiCUdPpbNG4I7Brz1LhYKLyKP2SVT1rrvzx9CCxs2a2jfeY_fAzgyT_UbwRTSPvpBpa2TcEbowuW21vLtKvVg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      X-Powered-By:
+      - Undertow/1
+      Server:
+      - JBoss-EAP/7
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '158'
+      Date:
+      - Mon, 09 Oct 2017 07:34:26 GMT
+      Set-Cookie:
+      - a054b5d9e987bf679f10c9d29be39478=dde9a2341ac2344965c2d899abc7b53b; path=/;
+        HttpOnly; Secure
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAA2MvQ7CIBgA34VZmgJFUrf6U3Vwkcb9o3yNJJQ2QF2M7y7TLXf3JQ/M0Y1JY/y4EcmB6KF7Dpcz2ZH7vHqcMWTIbgn0hTEVFqWuuKpk1bsAnka0b8iUleC4OZ9pH5eZXl2m+taxYk+cgUIp0IAUHFtbQ8MnztUeBbONGI20YFoogxOkBMFGKNm2kt8fuNfapZ8AAAA=
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 07:34:26 GMT
+- request:
+    method: get
+    uri: https://hawkular-metrics.10.35.49.18.nip.io/hawkular/metrics/gauges/kibana%2F3cf5f222-a6c4-11e7-8de6-001a4a162711%2Fmemory%2Fusage/stats/?bucketDuration=3600s&end=1507482000000&start=1507226400000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.2p198
+      Hawkular-Tenant:
+      - vcr-tests
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJtYW5hZ2VtZW50LWluZnJhIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Im1hbmFnZW1lbnQtYWRtaW4tdG9rZW4tNmo4NTUiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoibWFuYWdlbWVudC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjdkYzIwZGM2LWE2YzAtMTFlNy04ZGU2LTAwMWE0YTE2MjcxMSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDptYW5hZ2VtZW50LWluZnJhOm1hbmFnZW1lbnQtYWRtaW4ifQ.Cuf_1soEiFIFEwXkZy3B-xBlgk63nc4QckylCQBsbjNXVy3RULKzpqpXYDpOjtacbo0KDX2p50n9cOtj5zwyR31EAAmAU8IoJXHpytOrdsJrmRe6ZZSUBq12Fq44dV5zdhey5k5jQ_VFlicKUqPW8jiQb_tBUQPX1co5DWsQJ8hDuWik84QBMG8DkY2fpc8IG6vIM02tNIMa0dgAXAyntkRRedezhnBYBSI5RqDkqKT7Kmae9rcjeXiwhhKFLDAVDDiCUdPpbNG4I7Brz1LhYKLyKP2SVT1rrvzx9CCxs2a2jfeY_fAzgyT_UbwRTSPvpBpa2TcEbowuW21vLtKvVg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      X-Powered-By:
+      - Undertow/1
+      Server:
+      - JBoss-EAP/7
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '451'
+      Date:
+      - Mon, 09 Oct 2017 07:34:26 GMT
+      Set-Cookie:
+      - a054b5d9e987bf679f10c9d29be39478=dde9a2341ac2344965c2d899abc7b53b; path=/;
+        HttpOnly; Secure
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI2UMU4DMRQF77J1Cq/X67VzFUSBREoQCkuBEHdHSMl/gxLh5/JrpvAr5uFret+fzvt0nNe05VxL+n2H6fT6fLktKV1vL2/753Tczx+n78NfEZDEpRqiIIlbNkRBIZbUxiIgiaUYYrkdpzRjHEAhrrMxDiCJqzEOIInNGAdQiDUb4wCSWI1xAEnsxjiAQtwWYxxAEqsxDqAQWzLGASSxGOMAkrgZ4wAKsc/GOIAkFmMcQBKbMQ6gq7ikPB6HkMR1PA4hiX08DqEQ5zweh5DEOh6HUIiXb/8vApJoBJmQRCPIhEJcjCATkmgEmZBEI8iEQixGkAlJNIJMSKIRZEIhrkaQCUk0gkxIohFkQiFWI8iEJBpBJhTiZgSZkEQjyIQkGkEmFGIzgkxIohFkQhKNIBMKsTtB7neC3J0g9ztB7k6Q+22QSzKCTEiiEWRCIc5pPA4hiUaQCUk0gkwoxGwEmZBEI8iEJBpBJhTiYgSZkEQjyIQkGkEmFGIxgkxIohFkQhKNIBMKcTWCTEiiEWRCIVYjyIQkGkEmJNEIMqEQNyPIhCQaQSYk0QgyoRDb3SA//gBfKAN40A8AAA==
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 07:34:26 GMT
+- request:
+    method: get
+    uri: https://hawkular-metrics.10.35.49.18.nip.io/hawkular/metrics/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.2p198
+      Hawkular-Tenant:
+      - vcr-tests
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJtYW5hZ2VtZW50LWluZnJhIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Im1hbmFnZW1lbnQtYWRtaW4tdG9rZW4tNmo4NTUiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoibWFuYWdlbWVudC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjdkYzIwZGM2LWE2YzAtMTFlNy04ZGU2LTAwMWE0YTE2MjcxMSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDptYW5hZ2VtZW50LWluZnJhOm1hbmFnZW1lbnQtYWRtaW4ifQ.Cuf_1soEiFIFEwXkZy3B-xBlgk63nc4QckylCQBsbjNXVy3RULKzpqpXYDpOjtacbo0KDX2p50n9cOtj5zwyR31EAAmAU8IoJXHpytOrdsJrmRe6ZZSUBq12Fq44dV5zdhey5k5jQ_VFlicKUqPW8jiQb_tBUQPX1co5DWsQJ8hDuWik84QBMG8DkY2fpc8IG6vIM02tNIMa0dgAXAyntkRRedezhnBYBSI5RqDkqKT7Kmae9rcjeXiwhhKFLDAVDDiCUdPpbNG4I7Brz1LhYKLyKP2SVT1rrvzx9CCxs2a2jfeY_fAzgyT_UbwRTSPvpBpa2TcEbowuW21vLtKvVg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      X-Powered-By:
+      - Undertow/1
+      Server:
+      - JBoss-EAP/7
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '158'
+      Date:
+      - Mon, 09 Oct 2017 07:34:26 GMT
+      Set-Cookie:
+      - a054b5d9e987bf679f10c9d29be39478=dde9a2341ac2344965c2d899abc7b53b; path=/;
+        HttpOnly; Secure
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAA2MvQ7CIBgA34VZmgJFUrf6U3Vwkcb9o3yNJJQ2QF2M7y7TLXf3JQ/M0Y1JY/y4EcmB6KF7Dpcz2ZH7vHqcMWTIbgn0hTEVFqWuuKpk1bsAnka0b8iUleC4OZ9pH5eZXl2m+taxYk+cgUIp0IAUHFtbQ8MnztUeBbONGI20YFoogxOkBMFGKNm2kt8fuNfapZ8AAAA=
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 07:34:27 GMT
+- request:
+    method: get
+    uri: https://hawkular-metrics.10.35.49.18.nip.io/hawkular/metrics/counters/kibana%2F3cf5f222-a6c4-11e7-8de6-001a4a162711%2Fcpu%2Fusage/stats/?bucketDuration=3600s&end=1507482000000&start=1507222800000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.2p198
+      Hawkular-Tenant:
+      - vcr-tests
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJtYW5hZ2VtZW50LWluZnJhIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Im1hbmFnZW1lbnQtYWRtaW4tdG9rZW4tNmo4NTUiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoibWFuYWdlbWVudC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjdkYzIwZGM2LWE2YzAtMTFlNy04ZGU2LTAwMWE0YTE2MjcxMSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDptYW5hZ2VtZW50LWluZnJhOm1hbmFnZW1lbnQtYWRtaW4ifQ.Cuf_1soEiFIFEwXkZy3B-xBlgk63nc4QckylCQBsbjNXVy3RULKzpqpXYDpOjtacbo0KDX2p50n9cOtj5zwyR31EAAmAU8IoJXHpytOrdsJrmRe6ZZSUBq12Fq44dV5zdhey5k5jQ_VFlicKUqPW8jiQb_tBUQPX1co5DWsQJ8hDuWik84QBMG8DkY2fpc8IG6vIM02tNIMa0dgAXAyntkRRedezhnBYBSI5RqDkqKT7Kmae9rcjeXiwhhKFLDAVDDiCUdPpbNG4I7Brz1LhYKLyKP2SVT1rrvzx9CCxs2a2jfeY_fAzgyT_UbwRTSPvpBpa2TcEbowuW21vLtKvVg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      X-Powered-By:
+      - Undertow/1
+      Server:
+      - JBoss-EAP/7
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '454'
+      Date:
+      - Mon, 09 Oct 2017 07:34:27 GMT
+      Set-Cookie:
+      - a054b5d9e987bf679f10c9d29be39478=dde9a2341ac2344965c2d899abc7b53b; path=/;
+        HttpOnly; Secure
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI3UvUokURRF4Xfp2ODWf11fRSYQNFRE22AYfHcRps9eaGOtCi/rC+oE++7f6e18/3o+3Q5L28Zx3NvXd3N6fH64vK3z5e3p5fz3dHt+fX/8uPkGExWcWjuGiAKnVcBEgdsoYKKCc9uPIaLAWRwHUeAujoOo4DKI4yAKXMRxEAXu4jiICq6jOA6iwFUcB1FgF8dBVHCbxHEQBa7iOIgK7k0cB1HgLI6DKHATx0FUsA/iOIgCZ3EcRIG7OA6iC5zaeHwcRoHL8XEYBfbj4zAqOIzHx2EUKAaZUcH/v/07RBQoBplRoBhkRgUnMciMAsUgMwoUg8yo4CwGmVGgGGRGgWKQGRVcxCAzChSDzChQDDKjgqsYZEaBYpAZFdzEIDMKFIPMKFAMMqOCuxhkRoFikBkFikFmVLCbQe5XBrmbQe5XBrmbQe4/B3luYpAZBYpBZlRwaMfHYRQoBplRoBhkRgVHMciMAsUgMwoUg8yo4CQGmVGgGGRGgWKQGRWcxSAzChSDzChQDDKjgosYZEaBYpAZFVzFIDMKFIPMKFAMMqOCmxhkRoFikBkFikFmVHC/Osh/PgH7btftCRAAAA==
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 07:34:27 GMT
+- request:
+    method: get
+    uri: https://hawkular-metrics.10.35.49.18.nip.io/hawkular/metrics/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.2p198
+      Hawkular-Tenant:
+      - vcr-tests
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJtYW5hZ2VtZW50LWluZnJhIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Im1hbmFnZW1lbnQtYWRtaW4tdG9rZW4tNmo4NTUiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoibWFuYWdlbWVudC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjdkYzIwZGM2LWE2YzAtMTFlNy04ZGU2LTAwMWE0YTE2MjcxMSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDptYW5hZ2VtZW50LWluZnJhOm1hbmFnZW1lbnQtYWRtaW4ifQ.Cuf_1soEiFIFEwXkZy3B-xBlgk63nc4QckylCQBsbjNXVy3RULKzpqpXYDpOjtacbo0KDX2p50n9cOtj5zwyR31EAAmAU8IoJXHpytOrdsJrmRe6ZZSUBq12Fq44dV5zdhey5k5jQ_VFlicKUqPW8jiQb_tBUQPX1co5DWsQJ8hDuWik84QBMG8DkY2fpc8IG6vIM02tNIMa0dgAXAyntkRRedezhnBYBSI5RqDkqKT7Kmae9rcjeXiwhhKFLDAVDDiCUdPpbNG4I7Brz1LhYKLyKP2SVT1rrvzx9CCxs2a2jfeY_fAzgyT_UbwRTSPvpBpa2TcEbowuW21vLtKvVg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      X-Powered-By:
+      - Undertow/1
+      Server:
+      - JBoss-EAP/7
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '158'
+      Date:
+      - Mon, 09 Oct 2017 07:34:27 GMT
+      Set-Cookie:
+      - a054b5d9e987bf679f10c9d29be39478=dde9a2341ac2344965c2d899abc7b53b; path=/;
+        HttpOnly; Secure
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAA2MvQ7CIBgA34VZmgJFUrf6U3Vwkcb9o3yNJJQ2QF2M7y7TLXf3JQ/M0Y1JY/y4EcmB6KF7Dpcz2ZH7vHqcMWTIbgn0hTEVFqWuuKpk1bsAnka0b8iUleC4OZ9pH5eZXl2m+taxYk+cgUIp0IAUHFtbQ8MnztUeBbONGI20YFoogxOkBMFGKNm2kt8fuNfapZ8AAAA=
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 07:34:27 GMT
+- request:
+    method: get
+    uri: https://hawkular-metrics.10.35.49.18.nip.io/hawkular/metrics/gauges/kibana%2F3cf5f222-a6c4-11e7-8de6-001a4a162711%2Fmemory%2Fusage/stats/?bucketDuration=3600s&end=1507482000000&start=1507226400000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.2p198
+      Hawkular-Tenant:
+      - vcr-tests
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJtYW5hZ2VtZW50LWluZnJhIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Im1hbmFnZW1lbnQtYWRtaW4tdG9rZW4tNmo4NTUiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoibWFuYWdlbWVudC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjdkYzIwZGM2LWE2YzAtMTFlNy04ZGU2LTAwMWE0YTE2MjcxMSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDptYW5hZ2VtZW50LWluZnJhOm1hbmFnZW1lbnQtYWRtaW4ifQ.Cuf_1soEiFIFEwXkZy3B-xBlgk63nc4QckylCQBsbjNXVy3RULKzpqpXYDpOjtacbo0KDX2p50n9cOtj5zwyR31EAAmAU8IoJXHpytOrdsJrmRe6ZZSUBq12Fq44dV5zdhey5k5jQ_VFlicKUqPW8jiQb_tBUQPX1co5DWsQJ8hDuWik84QBMG8DkY2fpc8IG6vIM02tNIMa0dgAXAyntkRRedezhnBYBSI5RqDkqKT7Kmae9rcjeXiwhhKFLDAVDDiCUdPpbNG4I7Brz1LhYKLyKP2SVT1rrvzx9CCxs2a2jfeY_fAzgyT_UbwRTSPvpBpa2TcEbowuW21vLtKvVg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      X-Powered-By:
+      - Undertow/1
+      Server:
+      - JBoss-EAP/7
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '451'
+      Date:
+      - Mon, 09 Oct 2017 07:34:28 GMT
+      Set-Cookie:
+      - a054b5d9e987bf679f10c9d29be39478=dde9a2341ac2344965c2d899abc7b53b; path=/;
+        HttpOnly; Secure
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAI2UMU4DMRQF77J1Cq/X67VzFUSBREoQCkuBEHdHSMl/gxLh5/JrpvAr5uFret+fzvt0nNe05VxL+n2H6fT6fLktKV1vL2/753Tczx+n78NfEZDEpRqiIIlbNkRBIZbUxiIgiaUYYrkdpzRjHEAhrrMxDiCJqzEOIInNGAdQiDUb4wCSWI1xAEnsxjiAQtwWYxxAEqsxDqAQWzLGASSxGOMAkrgZ4wAKsc/GOIAkFmMcQBKbMQ6gq7ikPB6HkMR1PA4hiX08DqEQ5zweh5DEOh6HUIiXb/8vApJoBJmQRCPIhEJcjCATkmgEmZBEI8iEQixGkAlJNIJMSKIRZEIhrkaQCUk0gkxIohFkQiFWI8iEJBpBJhTiZgSZkEQjyIQkGkEmFGIzgkxIohFkQhKNIBMKsTtB7neC3J0g9ztB7k6Q+22QSzKCTEiiEWRCIc5pPA4hiUaQCUk0gkwoxGwEmZBEI8iEJBpBJhTiYgSZkEQjyIQkGkEmFGIxgkxIohFkQhKNIBMKcTWCTEiiEWRCIVYjyIQkGkEmJNEIMqEQNyPIhCQaQSYk0QgyoRDb3SA//gBfKAN40A8AAA==
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 07:34:28 GMT
+recorded_with: VCR 3.0.3

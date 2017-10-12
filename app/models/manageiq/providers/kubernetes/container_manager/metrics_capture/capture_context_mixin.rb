@@ -60,6 +60,9 @@ class ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture
 
     def process_cpu_counters_rate(counters_rate)
       @metrics |= ['cpu_usage_rate_average'] unless counters_rate.empty?
+      # TODO(lsmola) ah so this is not entirely correct since @interval should be uptime? At least hawkular docs say that
+      # https://github.com/openshift/origin-metrics/blob/master/docs/hawkular_metrics.adoc#calcuating-percentage-cpu-usage
+      # Maybe the error is small for 30s interval, but for 3600s interval, this is probably not viable.
       total_cpu_time = @node_cores * CPU_NANOSECONDS * @interval
       counters_rate.each do |x|
         timestamp = Time.at(x['start'] / 1.in_milliseconds).utc
@@ -110,7 +113,7 @@ class ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture
         {
           'start' => n['start'],
           'end'   => n['end'],
-          'avg'   => n['avg'] - prv['avg']
+          'avg'   => n['max'] - prv['max']
         }
       end
     end
