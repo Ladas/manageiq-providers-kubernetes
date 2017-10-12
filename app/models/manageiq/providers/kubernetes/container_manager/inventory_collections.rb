@@ -338,6 +338,7 @@ module ManageIQ::Providers::Kubernetes::ContainerManager::InventoryCollections
       @collections[[:custom_attributes_for, relation.model.base_class.name, section.to_s]] =
         ::ManagerRefresh::InventoryCollection.new(
           shared_options.merge(
+            :name                         => "#{association}_#{section}".to_sym,
             :model_class                  => CustomAttribute,
             :arel                         => query,
             :manager_ref                  => [:resource, :section, :name],
